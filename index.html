@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>💕 Happy Birthday Farouha 💕</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Quicksand:wght@400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💕</text></svg>">
+</head>
+<body>
+    <!-- Floating Hearts Background -->
+    <div class="hearts-bg" id="heartsBg"></div>
+
+    <!-- ========== SECTION 0: PASSWORD ========== -->
+    <section class="page active" id="pagePassword">
+        <div class="container">
+            <div class="lock-icon">🔒</div>
+            <h1 class="title-kawaii">Farouha ??</h1>
+            <p class="subtitle">5ameni el password ba2a<br>law fakarti showaya 7atgibi 😌🤷🏻‍♂️</p>
+            <div class="input-group">
+                <input type="password" id="passwordInput" placeholder="El password ya Farouha..." autocomplete="off" autofocus>
+                <button class="btn-pink" id="passwordBtn">Yalla! 💖</button>
+            </div>
+            <p class="error-msg" id="passwordError">8alat ya amouuraaa !</p>
+        </div>
+    </section>
+
+    <!-- ========== SECTION 1: WELCOME ========== -->
+    <section class="page" id="pageWelcome">
+        <div class="container">
+            <div class="cake-icon">🎂</div>
+            <h1 class="title-kawaii">Kol sana wenty tayeba<br>ya Farouha! 🎉</h1>
+            <p class="subtitle fade-in-delay">3amelek mofag2a bas abl ma teshoufiha...<br>Lazem te3ady el e5tebar el awel<br>Niahahahaha 😈</p>
+            <button class="btn-pink pulse" id="startQuizBtn">Yalla !</button>
+        </div>
+    </section>
+
+    <!-- ========== SECTION 2: QUIZ - SONG ========== -->
+    <section class="page" id="pageSong">
+        <div class="container">
+            <div class="quiz-icon">🎵</div>
+            <h1 class="title-kawaii">Eih awel o8neya<br>8anethalek? 🎶</h1>
+            <p class="subtitle">Law mesh fakra yeb2a fi moshkelaa 😒</p>
+            <div class="input-group">
+                <input type="text" id="songInput" placeholder="Ektebi esm el o8neya..." autocomplete="off">
+                <button class="btn-pink" id="songBtn">Check ✨</button>
+            </div>
+            <p class="error-msg" id="songError">A7eiiihhh !! 😱 7a2ayar 3ala fekra 😤</p>
+            <p class="success-msg" id="songSuccess"></p>
+        </div>
+    </section>
+
+    <!-- ========== SECTION 3: QUIZ - FIRST I LOVE YOU ========== -->
+    <section class="page" id="pageLove">
+        <div class="container">
+            <div class="quiz-icon">💕</div>
+            <h1 class="title-kawaii">Emta awel marra<br>2oltelek ba7ebek? 💖</h1>
+            <p class="subtitle">Ektebi el youm wel shahr (DD/MM) 📅</p>
+            <div class="input-group">
+                <input type="text" id="loveInput" placeholder="_ _ / _ _" autocomplete="off" maxlength="5" inputmode="numeric">
+                <button class="btn-pink" id="loveBtn">Check 💕</button>
+            </div>
+            <p class="error-msg" id="loveError">A7eiiihhh !! 😱 7a2ayar 3ala fekra 😤</p>
+            <p class="success-msg" id="loveSuccess"></p>
+            <!-- Emoji reaction overlay -->
+            <div class="emoji-reaction" id="emojiReaction"></div>
+        </div>
+    </section>
+
+
+    <!-- ========== SECTION 5: TEASE / BUILD-UP ========== -->
+    <section class="page" id="pageTease">
+        <div class="container">
+            <div class="tease-messages" id="teaseMessages">
+                <div class="tease-msg" id="tease1">
+                    <h1 class="title-kawaii">Ana 3amelek<br> mofag2a 🤩🎁</h1>
+                </div>
+                <div class="tease-msg hidden" id="tease2">
+                    <h1 class="title-kawaii gahza">Gahzaaaa ??? 👀</h1>
+                </div>
+                <div class="tease-msg hidden" id="tease3">
+                    <h1 class="title-kawaii">Mota7amessaaaa ??🔥</h1>
+                </div>
+                <div class="tease-msg hidden" id="tease4">
+                    <h1 class="title-kawaii">Yalla beeeeeena 😉</h1>
+                </div>
+            </div>
+            <button class="btn-pink pulse hidden" id="teaseNextBtn">Warinii! 🤩</button>
+        </div>
+    </section>
+
+    <!-- ========== SECTION 6: WILL YOU BE MY VALENTINE ========== -->
+    <section class="page" id="pageValentine">
+        <div class="container valentine-container">
+            <h1 class="title-big-pink">Abl mawariki bas <br>Bet7ebini ?? 💕</h1>
+            <p class="subtitle">Eb2i ablini law 3erefty te2ouli <b>NO</b> 😏<br>Niahahaha 😈</p>
+            <div class="valentine-buttons">
+                <button class="btn-yes" id="btnYes">YES! 💖</button>
+                <button class="btn-no" id="btnNo"><b>NO</b></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SECTION 7: GOOD CHOICE ========== -->
+    <section class="page scrollable" id="pageGoodChoice">
+        <div class="container">
+            <h1 class="title-kawaii good-choice-title">Shatoura ya Farouha 😏</h1>
+            <p class="subtitle">Kont 3aref eno <b>YES</b> 3ala fekra<br>Hehehe 😁</p>
+
+            <h2 class="stuck-forever">Now you're stuck with me forever ∞🤷🏻‍♂️</h2>
+            
+            <div class="change-mind">
+                <p>Ya3nii mesh 7a7eeell ya gamiiiillll 💕😉</p>
+                <button class="btn-no-small" id="btnChangeNo"><b>Yuuukkii Eeeww 😝</b></button>
+            </div>
+            
+            <button class="btn-pink pulse" id="continueBtn">Yalla nekamel 💕</button>
+        </div>
+    </section>
+
+    <!-- ========== SECTION 7.5: SURPRISE TRANSITION ========== -->
+    <section class="page" id="pageSurprise">
+        <div class="container">
+            <h1 class="title-big-pink surprise-text" id="surpriseText">El mofag2a 🎁</h1>
+            <div class="surprise-arrow" id="surpriseArrow">>></div>
+        </div>
+    </section>
+
+    <!-- ========== SECTION 8: SONG REVEAL ========== -->
+    <section class="page scrollable" id="pageSongReveal">
+        <div class="container">
+            <div class="music-notes-icon">🎶</div>
+            <h1 class="title-kawaii">Ana 3amaltelak o8neya<br>bel AI ya gamiiill entaa 😉</h1>
+            <p class="subtitle">Heya fiha kessa so8ayara bassita keda 😅<br>bas mesh perfect 3ashan fi kalemat<br>bayza men el AI 😂</p>
+            <p class="subtitle">Bas yarab te3gebekk 😘</p>
+            
+            <div class="song-player">
+                <div class="audio-player-wrapper">
+                    <button class="btn-play" id="playPauseBtn">
+                        <span class="play-icon" id="playIcon">▶</span>
+                        <span id="playText">Esma3y el o8neya 🎵</span>
+                    </button>
+                    <audio id="songAudio" preload="auto">
+                        <source src="Intro.mp3" type="audio/mpeg">
+                    </audio>
+                    <div class="audio-progress">
+                        <div class="audio-progress-bar" id="audioProgress"></div>
+                    </div>
+                    <div class="audio-time" id="audioTime">0:00 / 0:00</div>
+                </div>
+                <div class="floating-notes">
+                    <span class="note">🎵</span>
+                    <span class="note">🎶</span>
+                    <span class="note">🎵</span>
+                    <span class="note">💕</span>
+                    <span class="note">🎶</span>
+                </div>
+            </div>
+
+            <!-- Lyrics Section -->
+            <div class="lyrics-section">
+                <h2 class="lyrics-title">📜 Lyrics 📜</h2>
+                <div class="lyrics-content" id="lyricsContent">
+                    <div class="lyrics-section-title">Intro</div>
+                    <div>من غير مواعيد</div>
+                    <div>من غير حساب</div>
+                    <div>صحاب وبنضْحك</div>
+                    <div>والقلب كان لسه نايم في الغياب</div>
+
+                    <hr class="lyrics-divider">
+
+                    <div class="lyrics-section-title">Verse 1</div>
+                    <div>فاكر لما كنت أناديكي فوف</div>
+                    <div>وإحنا أصحاب ومفيش في البال</div>
+                    <div>ولما الاسم بقى عادي</div>
+                    <div>قلت لأ… أنا عايز اسم يخصّنا إحنا</div>
+                    <div>قُرب وصُحبة من غير سؤال</div>
+                    <br>
+                    <div>سميتك فؤش</div>
+                    <div>ده اسم طالع من عشرة</div>
+                    <div>وحكاية بينا</div>
+                    <div>مش محتاجة تتقال</div>
+
+                    <hr class="lyrics-divider">
+
+                    <div class="lyrics-section-title">Chorus</div>
+                    <div>يا فرّوحة قلبي <span style="color:#ccc">(ya farouhet alby)</span></div>
+                    <div>يا فرحة حياتي</div>
+                    <div>وجودك جنبي</div>
+                    <div>أحلى هدية جاتلي في حياتي</div>
+                    <br>
+                    <div>يا فرح فؤاد، يا حتة من فؤادي</div>
+                    <div>وجودك جنبي</div>
+                    <div>نور أيامي</div>
+                    <div>إنتِ مش بس حبيبتي</div>
+                    <div>إنتِ الأمان… السَّنَد <span style="color:#ccc">(el-sanad)</span>… وكلامي</div>
+
+                    <hr class="lyrics-divider">
+
+                    <div class="lyrics-section-title">Verse 2</div>
+                    <div>ولما بتأياري</div>
+                    <div>وتبقي فاؤش</div>
+                    <div>تزعلي شوية</div>
+                    <div>بس تبقي أحلى واحدة في الدنيا… مفيش نقاش</div>
+                    <br>
+                    <div>يا شوهايا</div>
+                    <div>زي الشو</div>
+                    <div>حلوة من جواكي</div>
+                    <div>وقريبة للقلب من أول bite ومن أول hello</div>
+                    <br>
+                    <div>وأضحك وأقولك</div>
+                    <div>يا قمر إنتَ يا جميل</div>
+                    <div>بس بتقولي لي</div>
+                    <div>"Yukii… eww" 😅</div>
+
+                    <hr class="lyrics-divider">
+
+                    <div class="lyrics-section-title">Pre-Chorus</div>
+                    <div>بس لما أنا اللي أأيّر</div>
+                    <div>بيبقى</div>
+                    <div>يخربت النكد <span style="color:#ccc">(ye5rebet el-nakad)</span></div>
+                    <div>بس كده كده</div>
+                    <div>مفيش نكد معاكي</div>
+                    <div>يا قمورة <span style="color:#ccc">(ya 2amoura)</span></div>
+
+                    <hr class="lyrics-divider">
+
+                    <div class="lyrics-section-title">Chorus (أعلى)</div>
+                    <div>يا فرح فؤاد، يا حتة من فؤادي</div>
+                    <div>يا قمورة</div>
+                    <div>يا أحلى صدفة</div>
+                    <div>دخلت حياتي من غير ما أخد بالي</div>
+                    <div>وخليت الصحوبية</div>
+                    <div>حب… وأمان… وحلم في خيالي</div>
+                    <br>
+                    <div>يا فرح</div>
+                    <div>وأنا جنبك دايمًا</div>
+                    <div>في الضحكة</div>
+                    <div>وفي الزعل</div>
+                    <div>أنا مكانك الآمن</div>
+
+                    <hr class="lyrics-divider">
+
+                    <div class="lyrics-section-title">Outro</div>
+                    <div>والنهارده عيد ميلادك</div>
+                    <div>وأنا وعدي ليكي</div>
+                    <div>أفضل جنبك</div>
+                    <div>Safe zone</div>
+                    <div>وحضن</div>
+                    <div>ودنيا تريحك</div>
+                    <br>
+                    <div>وأغير أسامي</div>
+                    <div>وأغير كلام</div>
+                    <div>بس عمري</div>
+                    <div>ما أغير</div>
+                    <div>إني بحبك</div>
+                    <div>يا فرح ❤️</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Confetti Canvas -->
+    <canvas id="confettiCanvas"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>
